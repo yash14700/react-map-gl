@@ -128,7 +128,7 @@ export default class TransitionManager {
     }
     if (this._isTransitionEnabled(nextProps)) {
       // Ignore if none of the viewport props changed.
-      return nextProps.transitionInterpolator.arePropsEqual(currentProps, nextProps);
+      return currentProps === nextProps;
     }
 
     return true;
